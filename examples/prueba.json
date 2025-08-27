@@ -1,0 +1,48 @@
+{
+  "pleats": [
+    {"name": "a"},
+    {"name": "b"},
+    {"name": "s"},
+    {"name": "c"},
+    {"name": "t_or"},
+    {"name": "t_and"},
+    {"name": "t_nand"}
+  ],
+  "gadgets": [
+    {
+      "id": "and1",
+      "type": "AND",
+      "inputs": ["a", "b"],
+      "outputs": ["c"]
+    },
+    {
+      "id": "or1",
+      "type": "OR",
+      "inputs": ["a", "b"],
+      "outputs": ["t_or"]
+    },
+    {
+      "id": "and2",
+      "type": "AND",
+      "inputs": ["a", "b"],
+      "outputs": ["t_and"]
+    },
+    {
+      "id": "not1",
+      "type": "NOT",
+      "inputs": ["t_and"],
+      "outputs": ["t_nand"]
+    },
+    {
+      "id": "and3",
+      "type": "AND",
+      "inputs": ["t_or", "t_nand"],
+      "outputs": ["s"]
+    }
+  ],
+  "inputs": {
+    "a": true,
+    "b": false
+  },
+  "outputs": ["s", "c"]
+}
